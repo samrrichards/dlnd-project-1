@@ -16856,10 +16856,10 @@ height=272
 <p>Minimizing this specific sort of error was more or less my largest challenge in tweaking the hyperparameters. I got my network to be at least a <em>bit</em> sensitive to the drop in ridership during the holidays (...it was initially expecting the same sorts of numbers during the last third of the month as in the first two-thirds), but it still seems to think that there will be more riders than there actually will be.</p>
 <p>This might be for a few reasons:</p>
 <ul>
-<li><p>The "holiday" variable is a simple boolean; it doesn't provide any information about <em>proximity</em> to holidays. This might make it hard for the network to initially learn that low ridership can take place on days <em>near</em> holidays (like, say, December 23rd) that aren't <em>actual</em> holidays.</p>
-</li>
-<li><p>Also, the network might not initially place a lot of importance on the "holiday" variable. It likely starts by taking other variables into consideration (windspeed, temperature, time of day, etc.) and since thse variables alone do a good job of predicting ridership <em>when it's not near the holidays</em>, it probably expects them to do a goood job of predicting ridership during the holidays as well. It's important, then, for the network to at some point "realize" that proximity to holidays has a pronounced effect on ridership and take that into consideration, even though this would probably not be immediately obvious.</p>
-</li>
+<li>The "holiday" variable is a simple boolean; it doesn't provide any information about <em>proximity</em> to holidays. This might make it hard for the network to initially learn that low ridership can take place on days <em>near</em> holidays (like, say, December 23rd) that aren't <em>actual</em> holidays. </li>
+</ul>
+<ul>
+<li>Also, the network might not initially place a lot of importance on the "holiday" variable. It likely starts by taking other variables into consideration (windspeed, temperature, time of day, etc.) and since thse variables alone do a good job of predicting ridership <em>when it's not near the holidays</em>, it probably expects them to do a good job of predicting ridership during the holidays as well. It's important, then, for the network to at some point "realize" that proximity to holidays has a pronounced effect on ridership and take that into consideration, even though this would probably not be immediately obvious. </li>
 </ul>
 
 </div>
